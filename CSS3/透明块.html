@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			perspective: 1000px;
+		}
+		#container{
+			position: relative;
+			transform-style: preserve-3d;
+			margin: 0 auto;
+			width: 200px;
+			height: 200px;
+			padding-top: 100px;
+			animation: galary 10s linear infinite;
+		}
+		#container:hover{
+			animation-play-state: paused;
+		}
+		#container>div{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			background: yellowgreen;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0.5;
+		}
+		#container #page_1{
+			transform: rotateY(0deg) translateZ(100px);
+		}
+		#container #page_2{
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		#container #page_3{
+			transform: rotateY(180deg) translateZ(100px);
+		}
+		#container #page_4{
+			transform: rotateY(270deg) translateZ(100px);
+		}
+		#container #page_5{
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		#container #page_6{
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+		@keyframes galary{
+			0%{transform: rotateY(0deg) rotateX(-15deg)}
+			25%{transform: rotateY(90deg) rotateX(-15deg)}
+			50%{transform: rotateY(180deg) rotateX(-15deg)}
+			75%{transform: rotateY(270deg) rotateX(-15deg)}
+			100%{transform: rotateY(360deg) rotateX(-15deg)}
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="page_1">1</div>
+		<div id="page_2">2</div>
+		<div id="page_3">3</div>
+		<div id="page_4">4</div>
+		<div id="page_5">5</div>
+		<div id="page_6">6</div>
+	</div>
+</body>
+</html>
