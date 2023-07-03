@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #373737;
+      }
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button.flip-button {
+        color: #fff;
+        border: 1px solid #fff;
+        position: relative;
+        width: 200px;
+        height: 40px;
+      }
+
+      .flip-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all 600ms ease-in-out;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+      }
+
+      .flip-text.back {
+        transform: rotateX(0.5turn);
+      }
+
+      .flip-button:hover .flip-text {
+        transform: rotateX(0.5turn);
+      }
+
+      .flip-button:hover .flip-text.back {
+        transform: rotateX(0turn);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="flip-button">
+      <div class="flex-center flip-text front">Hover Me</div>
+      <div class="flex-center flip-text back">Hello Wise.Wrong</div>
+    </button>
+  </body>
+</html>

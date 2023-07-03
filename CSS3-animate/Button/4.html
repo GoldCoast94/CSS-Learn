@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #ccc;
+      }
+      button {
+        --bg-color: #555660;
+        --font-color: #fff;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition-config);
+      }
+
+      button.fill-button {
+        color: var(--font-color);
+        border: 1px solid var(--font-color);
+        position: relative;
+        padding: 8px 40px;
+        transition: all 600ms ease-out;
+        /* 以下为核心代码 */
+        background-size: 200% 100%;
+        background-position: right bottom;
+        background-image: linear-gradient(
+          to right,
+          var(--font-color) 50%,
+          var(--bg-color) 50%
+        );
+      }
+
+      button.fill-button:hover {
+        color: var(--bg-color);
+        background-position: left bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="fill-button">Hover Me</button>
+  </body>
+</html>
