@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		#container{
-			display: flex;
-			width: 800px;
-			margin: 30px auto;
-			border: 1px solid purple;
-		}
-		.box{
-			width: 100px;
-			text-align: center;
-			line-height: 100px;
-			background: yellowgreen;
-			border: 1px solid #ccc;
-		}
-		.box:nth-child(4){
-			/*flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto*/
-			flex: 1 1 auto;
-			background: greenyellow;
-		}
-	</style>
-</head>
-<body>
-	<div id="container">
-		<div class="box">1</div>
-		<div class="box">2</div>
-		<div class="box">3</div>
-		<div class="box">4</div>
-		<div class="box">5</div>
-		<div class="box">6</div>
-		<div class="box">7</div>
-	</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+        width: 800px;
+        margin: 30px auto;
+        border: 1px solid rgb(192, 97, 8);
+      }
+      .box {
+        width: 100px;
+        text-align: center;
+        line-height: 100px;
+        background: yellowgreen;
+        border: 1px solid #ccc;
+      }
+      .box:nth-child(4) {
+        /*flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto*/
+        flex: 1 1 auto;
+        background: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+    </div>
+  </body>
 </html>
