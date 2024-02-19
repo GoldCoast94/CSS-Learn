@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div{
+			padding: 0;
+			margin: 0;
+		}
+		#oDiv{
+			margin: 100px auto;
+			width: 100px;
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			font-weight: 500;
+			background:#c60 ;
+			border-radius: 10px;
+			position: relative;
+			animation: myFirst 3s linear 1s infinite alternate;
+		}
+		@keyframes myFirst{
+			0%{background: #c60;left: 0;top: 0;}
+			25%{background: pink;left: 100px;top: 0;}
+			50%{background: #ccc;left: 100px;top: 100px;}
+			75%{background: orange;left: 0;top: 100px;}
+			100%{background: purple;left: 0;top: 0;}
+		}
+		#div1{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			background: #ccc;
+			transition: 6s all;
+		}
+		#div1:hover{
+			transform: rotateY(360deg);
+		}
+	</style>
+</head>
+<body>
+	<div id="oDiv">
+		<span>CSS3 运动</span>
+	</div>
+
+	<div id="div1">
+		黄金海岸
+	</div>
+</body>
+</html>
